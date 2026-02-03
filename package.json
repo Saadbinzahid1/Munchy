@@ -1,0 +1,29 @@
+{
+  "name": "munchy",
+  "version": "1.0.0",
+  "description": "Recipe App",
+  "homepage": "https://github.com/Saadbinzahid1/Munchy#readme",
+  "bugs": {
+    "url": "https://github.com/Saadbinzahid1/Munchy/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Saadbinzahid1/Munchy.git"
+  },
+  "license": "ISC",
+  "author": "Saad Bin Zahid",
+  "type": "commonjs",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.16.4",
+    "parcel": "^2.16.4"
+  },
+  "dependencies": {
+    "core-js": "^3.48.0",
+    "fracty": "^1.0.12",
+    "regenerator-runtime": "^0.14.1"
+  }
+}
