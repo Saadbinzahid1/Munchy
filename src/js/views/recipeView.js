@@ -12,7 +12,7 @@ class RecipeView extends View {
     window.addEventListener("load", handler);
   }
 
-  _getMarkup() {
+  _generateMarkup() {
     return `
     <figure class="recipe__fig">
           <img src="${this._data.image}" alt="${this._data.title}" class="recipe__img" />
@@ -49,11 +49,7 @@ class RecipeView extends View {
               </button>
             </div>
           </div>
-
           <div class="recipe__user-generated">
-            <svg>
-              <use href="${icons}#icon-user"></use>
-            </svg>
           </div>
           <button class="btn--round">
             <svg class="">

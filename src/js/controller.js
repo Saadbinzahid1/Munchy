@@ -6,6 +6,8 @@ import "core-js/stable";
 import "regenerator-runtime/runtime";
 
 ///////////////////////////////////////
+if (module.hot) module.hot.accept();
+
 async function controlRecipes() {
   try {
     const id = window.location.hash.slice(1);
@@ -25,13 +27,13 @@ async function controlRecipes() {
 
 async function controlSearchResults() {
   try {
-    resultsView.renderSpinner();
     const query = searchView.getQuery();
     if (!query) return;
+    resultsView.renderSpinner();
 
     await model.loadSearchResults(query);
 
-    console.log(model.state.search.results);
+    resultsView.render(model.state.search.results);
   } catch (err) {}
 }
 controlSearchResults();
