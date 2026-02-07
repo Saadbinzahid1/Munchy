@@ -15,7 +15,7 @@ async function controlRecipes() {
     console.log(id);
     if (!id) return;
     recipeView.renderSpinner();
-
+    resultsView.update(model.getSearchResultsPage());
     await model.loadRecipe(id);
 
     recipeView.render(model.state.recipe);
@@ -51,7 +51,7 @@ function controlPagination(goToPage) {
 
 function controlServings(newServings) {
   model.updateServings(newServings);
-  recipeView.render(model.state.recipe);
+  recipeView.update(model.state.recipe);
 }
 
 function init() {
